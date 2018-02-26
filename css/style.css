@@ -50,20 +50,18 @@ a {
       display: -ms-flex;
        display: -o-flex;
           display: flex;
--ms-align-items: flex-start;
-align-items: flex-start;
-
-
+  justify-content: space-between;
   height: 60px;
   width: 100%;
   margin: 0 auto;
 
-  text-align: center;
   vertical-align: middle;
   }
 
+
   .main-logo{
     display: inline-block;
+    vertical-align: top;
   }
   .logo-link{
     display: inline-block;
@@ -73,6 +71,7 @@ align-items: flex-start;
   }
   .main-nav {
     display: none;
+    vertical-align: middle;
   }
 
   .logo-img-desctop {
@@ -99,7 +98,7 @@ align-items: flex-start;
     font-family: roboto, arial, sans-serif;
     color: #2e323d;
     font-size: 18px;
-    /*line-height: 60px;*/
+    line-height: 60px;
   }
 
   .header-burger {
@@ -147,6 +146,7 @@ align-items: flex-start;
     font-weight:400;
     /*text-align:center;*/
     font-size:18px;
+    padding-left: 20px;
 
     background: #e9e9f1;
   }
@@ -162,7 +162,7 @@ align-items: flex-start;
 
   .burger-menu li {
     display: block;
-    width: 290px;
+    width: 200px;
     padding:15px 0 15px 0;
 
     color: #3d4a57;
@@ -181,6 +181,8 @@ align-items: flex-start;
     display: inline-block;
     height: 35px;
     padding: 0 20px;
+    margin-top: 12px;
+    margin-right: 15px;
 
     font-family: roboto, Arial, sans-serif;
     font-weight:400;
@@ -193,13 +195,12 @@ align-items: flex-start;
     background-color: #fa8c15;
   }
 
-  .header-left {
-    height: 80px;
 
-  }
   .header-right {
     display: block;
   }
+
+
 }
 
 @media (min-width: 768px) {
@@ -252,7 +253,7 @@ align-items: flex-start;
 
   .main-nav__link {
     position: relative;
-    /*line-height: 80px;*/
+    line-height: 80px;
     margin-right: 22px;
   }
 
@@ -280,5 +281,17 @@ align-items: flex-start;
     transform: scaleY(5);
   }
 
+  .button-callback {
 
+    height: 40px;
+    padding: 0 23px;
+    margin-top: 21px;
+    margin-right: 26px;
+
+
+    font-size:16px;
+    line-height: 40px;
+    color: #fff;
+
+    border-radius: 18px;
 }
