@@ -43,12 +43,17 @@ a {
 
 
 @media (min-width: 320px) {
+
   .header-container{
   display: -webkit-flex;
      display: -moz-flex;
       display: -ms-flex;
        display: -o-flex;
           display: flex;
+-ms-align-items: flex-start;
+align-items: flex-start;
+
+
   height: 60px;
   width: 100%;
   margin: 0 auto;
@@ -57,6 +62,15 @@ a {
   vertical-align: middle;
   }
 
+  .main-logo{
+    display: inline-block;
+  }
+  .logo-link{
+    display: inline-block;
+    margin-top: 13px;
+    margin-left: 19px;
+
+  }
   .main-nav {
     display: none;
   }
@@ -64,8 +78,7 @@ a {
   .logo-img-desctop {
     width: 46px;
     height: 34px;
-    margin-top: 13px;
-    margin-left: 19px;
+
   }
 
   .main-nav__list {
@@ -86,7 +99,7 @@ a {
     font-family: roboto, arial, sans-serif;
     color: #2e323d;
     font-size: 18px;
-    line-height: 60px;
+    /*line-height: 60px;*/
   }
 
   .header-burger {
@@ -163,25 +176,47 @@ a {
     border-bottom:#ddd 1px solid;
        border-top:#ddd 1px solid;
   }
+
+  .button-callback {
+    display: inline-block;
+    height: 35px;
+    padding: 0 20px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    text-align:center;
+    font-size:14px;
+    line-height: 35px;
+    color: #fff;
+
+    border-radius: 18px;
+    background-color: #fa8c15;
+  }
+
+  .header-left {
+    height: 80px;
+
+  }
+  .header-right {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
   .header-container{
-  display: -webkit-flex;
-     display: -moz-flex;
-      display: -ms-flex;
-       display: -o-flex;
-          display: flex;
+
   height: 60px;
   width: 100%;
   margin: 0 auto;
   padding-left: 19px;
   }
 
+  .logo-link {
+    margin-left: 29px;
+  }
   .logo-img-desctop {
     width: 46px;
     height: 34px;
-    margin-left: 29px;
   }
 }
 
@@ -196,29 +231,28 @@ a {
     display: none;
   }
   .main-nav{
-    display: block;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
   }
   .header-container{
-  display: -webkit-flex;
-     display: -moz-flex;
-      display: -ms-flex;
-       display: -o-flex;
-          display: flex;
   height: 80px;
   width: 1170px;
   margin: 0 auto;
   }
-
+  .logo-link {
+    margin-top: 15px;
+    margin-right: 55px;
+  }
   .logo-img-desctop {
     width: 70px;
     height: 52px;
-    margin-top: 15px;
-    margin-right: 55px;
+
   }
 
   .main-nav__link {
     position: relative;
-    line-height: 80px;
+    /*line-height: 80px;*/
     margin-right: 22px;
   }
 
