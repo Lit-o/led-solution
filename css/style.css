@@ -1,0 +1,190 @@
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v18-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v18-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v18-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v18-cyrillic_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* roboto-500 - cyrillic_latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v18-cyrillic_latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+       url('../fonts/roboto-v18-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v18-cyrillic_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic_latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v18-cyrillic_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v18-cyrillic_latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+* {
+  padding: 0;
+   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*---Header---*/
+
+.main-header {
+  background-color: #fff;
+}
+
+
+@media (min-width: 320px) {
+  .header-container{
+  display: -webkit-flex;
+     display: -moz-flex;
+      display: -ms-flex;
+       display: -o-flex;
+          display: flex;
+  height: 60px;
+  width: 290px;
+  margin: 0 auto;
+
+  text-align: center;
+  vertical-align: middle;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .logo-img-desctop {
+    width: 46px;
+    height: 34px;
+    margin-top: 13px;
+    margin-left: 19px;
+  }
+
+  .main-nav__list {
+    list-style-type: none;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+  }
+
+  .main-nav__link {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+
+    font-family: roboto, arial, sans-serif;
+    color: #2e323d;
+    font-size: 18px;
+    line-height: 60px;
+  }
+
+  .header-burger {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url(../img/kebab.png);
+    cursor:pointer;
+    vertical-align: middle;
+
+    border:0;
+    background-color: #e9e9f1;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-container{
+  display: -webkit-flex;
+     display: -moz-flex;
+      display: -ms-flex;
+       display: -o-flex;
+          display: flex;
+  height: 60px;
+  width: 690px;
+  margin: 0 auto;
+  }
+
+  .logo-img-desctop {
+    width: 46px;
+    height: 34px;
+    margin-left: 29px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .burger-menu{
+    display: none;
+  }
+  .header-burger {
+    display: none;
+  }
+  .header-cross {
+    display: none;
+  }
+  .main-nav{
+    display: block;
+  }
+  .header-container{
+  display: -webkit-flex;
+     display: -moz-flex;
+      display: -ms-flex;
+       display: -o-flex;
+          display: flex;
+  height: 80px;
+  width: 1170px;
+  margin: 0 auto;
+  }
+
+  .logo-img-desctop {
+    width: 70px;
+    height: 52px;
+    margin-top: 15px;
+    margin-right: 55px;
+  }
+
+  .main-nav__link {
+    position: relative;
+    line-height: 80px;
+    margin-right: 22px;
+  }
+
+  .main-nav__link:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+
+    transition: all 0.2s linear;
+  }
+
+  .main-nav__link:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+
+    background-color: #501b88;
+
+    transform: scaleY(5);
+  }
+
+
+}
