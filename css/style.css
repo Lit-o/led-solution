@@ -35,6 +35,11 @@ a {
   color: #000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*---Header---*/
 
 .main-header {
@@ -146,7 +151,7 @@ a {
     font-weight:400;
     /*text-align:center;*/
     font-size:18px;
-    padding-left: 20px;
+    padding-left: 0px;
 
     background: #e9e9f1;
   }
@@ -163,7 +168,7 @@ a {
   .burger-menu li {
     display: block;
     width: 200px;
-    padding:15px 0 15px 0;
+    padding:15px 0 15px 20px;
 
     color: #3d4a57;
 
@@ -181,7 +186,7 @@ a {
     display: inline-block;
     height: 35px;
     padding: 0 20px;
-    margin-top: 12px;
+    margin-top: 15px;
     margin-right: 15px;
 
     font-family: roboto, Arial, sans-serif;
@@ -200,16 +205,19 @@ a {
     display: block;
   }
 
+  .callback-options{
+    display: none;
+  }
 
 }
 
 @media (min-width: 768px) {
   .header-container{
 
-  height: 60px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 19px;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 19px;
   }
 
   .logo-link {
@@ -219,6 +227,10 @@ a {
     width: 46px;
     height: 34px;
   }
+
+  .button-callback {
+
+    margin-right: 35px;
 }
 
 @media (min-width: 1280px) {
@@ -237,9 +249,9 @@ a {
     line-height: 80px;
   }
   .header-container{
-  height: 80px;
-  width: 1170px;
-  margin: 0 auto;
+    height: 80px;
+    width: 1170px;
+    margin: 0 auto;
   }
   .logo-link {
     margin-top: 15px;
@@ -282,11 +294,20 @@ a {
   }
 
   .button-callback {
-
+    display: inline-block;
+    /*width: 140px;*/
+    flex-shrink: 0;
     height: 40px;
     padding: 0 23px;
     margin-top: 21px;
-    margin-right: 26px;
+    /*margin-right: 26px;*/
+    margin-left: 32px;
+    margin-right: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
 
 
     font-size:16px;
@@ -295,3 +316,47 @@ a {
 
     border-radius: 18px;
 }
+.header-contacts{
+  width: 400px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  /*justify-content: space-between;*/
+}
+.header-number{
+  display: inline-block;
+  width: 100%;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight:500;
+  text-align:right;
+  font-size:20px;
+  line-height: 24px;
+  color: #000;
+  vertical-align: top;
+}
+
+.callback-text {
+  display: inline-block;
+  width: 100%;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  text-align:right;
+  font-size:16px;
+  /*line-height: 24px;*/
+  color: #000;
+  text-decoration: underline;
+}
+.callback-options {
+  display: block;
+  margin-top: 22px;
+  width: 175px;
+  margin-right: 0;
+}
+
+
+/*              Закончил адаптивную полностью первую линию хедора           */
