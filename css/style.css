@@ -186,7 +186,7 @@ img {
     display: inline-block;
     height: 35px;
     padding: 0 20px;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 15px;
 
     font-family: roboto, Arial, sans-serif;
@@ -229,8 +229,8 @@ img {
   }
 
   .button-callback {
-
     margin-right: 35px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -286,7 +286,7 @@ img {
     content: '';
     position: absolute;
     left: 0;
-    bottom: 5px;
+    bottom: 2px;
 
     background-color: #501b88;
 
@@ -315,48 +315,206 @@ img {
     color: #fff;
 
     border-radius: 18px;
-}
-.header-contacts{
-  width: 400px;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  }
+  .header-contacts{
+    width: 400px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
 
-  /*justify-content: space-between;*/
-}
-.header-number{
-  display: inline-block;
-  width: 100%;
+    /*justify-content: space-between;*/
+  }
+  .header-number{
+    display: inline-block;
+    width: 100%;
 
-  font-family: roboto, Arial, sans-serif;
-  font-weight:500;
-  text-align:right;
-  font-size:20px;
-  line-height: 24px;
-  color: #000;
-  vertical-align: top;
-}
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    text-align:right;
+    font-size:20px;
+    line-height: 24px;
+    color: #000;
+    vertical-align: top;
+  }
 
-.callback-text {
-  display: inline-block;
-  width: 100%;
+  .callback-text {
+    display: inline-block;
+    width: 100%;
 
-  font-family: roboto, Arial, sans-serif;
-  font-weight:400;
-  text-align:right;
-  font-size:16px;
-  /*line-height: 24px;*/
-  color: #000;
-  text-decoration: underline;
-}
-.callback-options {
-  display: block;
-  margin-top: 22px;
-  width: 175px;
-  margin-right: 0;
-}
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    text-align:right;
+    font-size:16px;
 
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .callback-options {
+    display: block;
+    margin-top: 22px;
+    width: 175px;
+    margin-right: 0;
+  }
+}
 
 /*              Закончил адаптивную полностью первую линию хедора           */
+
+@media (min-width: 320px) {
+  .wellcome {
+    height: 350px;
+
+    background-image: url(../img/bgnd1-phone2.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: center;
+  }
+
+  .main-title {
+    display: inline-block;
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 75px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.75);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    text-align:center;
+    font-size:20px;
+
+
+    color: #fff;
+  }
+
+  .main-title-discription {
+    display: block;
+    width: 245px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.75);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    text-align:center;
+    font-size:16px;
+
+    color: #fff;
+  }
+  .button-callback__wellcome {
+    margin-top: 35px;
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .wellcome {
+    height: 350px;
+
+    background-image: url(../img/bgnd1-tablet.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .main-title {
+    display: inline-block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 85px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.6);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    text-align:center;
+    font-size:30px;
+
+
+    color: #fff;
+  }
+
+  .main-title-discription {
+    display: block;
+    width: 415px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.6);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    text-align:center;
+    font-size:20px;
+
+    color: #fff;
+  }
+  .button-callback__wellcome {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+
+
+}
+
+
+@media (min-width: 1280px) {
+  .wellcome {
+  height: 720px;
+
+  background-image: url(../img/bgnd1.jpg);
+
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  }
+
+  .main-title {
+    display: inline-block;
+    width: 770px;
+    margin: 0 auto;
+    margin-top: 240px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.6);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    text-align:center;
+    font-size:48px;
+
+
+    color: #fff;
+  }
+
+  .main-title-discription {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 5px 10px;
+
+    background-color: rgba(46,50,61,0.6);
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    text-align:center;
+    font-size:24px;
+
+    color: #fff;
+  }
+  .button-callback__wellcome {
+    margin-top: 75px;
+    margin-right: 0;
+    font-size: 18px;
+  }
+}
+
+
+/*              Закончил стилизацию wellcome блока с адаптивом и mobile-first              */
