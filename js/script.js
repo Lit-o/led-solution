@@ -20,41 +20,51 @@ $( document ).ready(function() {
 
   // подключаю карусель
 
-  var timer;
-  $(window).on('resize', function(){
-    if ( timer ) clearTimeout(timer);
-    timer = setTimeout(function(){
-      togglePromotionsSlider();
-    }, 100);
+  // var timer;
+  // $(window).on('resize', function(){
+  //   if ( timer ) clearTimeout(timer);
+  //   timer = setTimeout(function(){
+  //     togglePromotionsSlider();
+  //   }, 100);
+  // });
+
+  // togglePromotionsSlider();
+
+  // function togglePromotionsSlider (){
+  //   $('.about-company__foto-slider').slick({
+  //     mobileFirst: true,
+  //     infinite: true,
+  //     slidesToScroll: 1,
+  //     responsive: [
+  //       {
+  //         breakpoint: 0,
+  //         settings: {
+  //           slidesToShow: 1,
+  //         }
+  //       },
+  //       {
+  //         breakpoint: 767,
+  //         settings: {
+  //           slidesToShow: 3,
+  //         }
+  //       },
+  //       {
+  //         breakpoint: 1279,
+  //         settings: 'unslick'
+  //       },
+  //     ]
+  //   });
+  // }
+
+  $('.about-company__foto-slider').slick({
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 600,
+    centerMode: true,
+    centerPadding: '0px',
+    dots: true,
+    pauseOnDotsHover: true,
   });
-
-  togglePromotionsSlider();
-
-  function togglePromotionsSlider (){
-    $('#slider').slick({
-      mobileFirst: true,
-      infinite: true,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 0,
-          settings: {
-            slidesToShow: 1,
-          }
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 3,
-          }
-        },
-        {
-          breakpoint: 1279,
-          settings: 'unslick'
-        },
-      ]
-    });
-  }
 
 });
 

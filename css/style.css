@@ -581,17 +581,76 @@ img {
   }
 
   .about-company__foto-title{
-    width: 215px;
+    width: 220px;
     margin: 0 auto;
     padding-top: 40px;
     font-family: roboto, Arial, sans-serif;
-    font-weight:400;
+    font-weight:500;
     text-align:center;
     font-size:20px;
     line-height: 26px;
     color: #2e323d;
   }
 
+  .about-company__foto-slider{
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .about-company__slider-item {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /*для высвечивания элементов, потом убрать*/
+  .about-company {
+    background-color: #ccc;
+  }
+
+  /*красивые дотсы по дизайну*/
+
+  .slick-dots {
+    position: absolute;
+    top: 135px;
+  }
+
+  .slick-dots li button{
+    position: relative;
+
+    width: 12px;
+    height: 12px;
+    border: 0px solid #000;
+    border-radius: 50%;
+    background-color: #2e323d;
+    opacity: 0.5;
+  }
+
+  .slick-dots li button:before{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+  }
+
+  .slick-dots li.slick-active button:before{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: 50%;
+  }
 
 }
 
