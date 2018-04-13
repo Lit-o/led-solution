@@ -592,8 +592,9 @@ img {
     color: #2e323d;
   }
 
+/*слайдер*/
   .about-company__foto-slider{
-    position: relative;
+    /*position: relative;*/
     width: 300px;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -606,14 +607,16 @@ img {
 
   /*для высвечивания элементов, потом убрать*/
   .about-company {
-    background-color: #ccc;
+    position: relative;
+    /*background-color: #ccc;*/
   }
 
   /*красивые дотсы по дизайну*/
 
   .slick-dots {
     position: absolute;
-    top: 135px;
+    top: auto;
+    bottom: 5px;
   }
 
   .slick-dots li button{
@@ -651,6 +654,56 @@ img {
     opacity: 0.9;
     border-radius: 50%;
   }
+
+
+  /*стилизую стрелочки*/
+
+  .slick-prev, .slick-next{
+    z-index: 1001;
+
+    width: 30px;
+    height: 40px;
+
+    background-color: rgba(46,50,61,0.5);
+  }
+  .slick-prev{
+    left: 5px;
+  }
+  .slick-next{
+    right: 5px;
+  }
+
+  .slick-prev:before{
+    content:'';
+    display: block;
+    width: 11px;
+    height: 40px;
+    margin-left: 8px;
+
+
+    background-image: url(../img/prev.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .slick-next:before{
+    content:'';
+    display: block;
+    width: 11px;
+    height: 40px;
+    margin-left: 10px;
+
+    background-image: url(../img/prev.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    transform: rotate(180deg);
+  }
+
+
 
 }
 
@@ -705,6 +758,21 @@ img {
     font-size:14px;
     line-height: 21px;
     color: #2e323d;
+  }
+
+  .about-company__foto-slider{
+    /*position: relative;*/
+    width: 690px;
+    height: 385px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: auto;
+    bottom: 20px;
   }
 
 }
@@ -768,6 +836,30 @@ img {
     color: #2e323d;
   }
 
+  .about-company__foto-slider{
+    position: absolute;
+    top: 120px;
+    right: 0;
+    z-index: 999;
 
+    width: 700px;
+    height: 390px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .about-company__foto-title{
+    position: absolute;
+    top: 55px;
+    right: 5px;
+
+    padding-top: 0;
+    width: 380px;
+    margin-right: 0;
+    text-align:right;
+    font-size:24px;
+    line-height: 30px;
+  }
 
 }
