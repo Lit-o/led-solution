@@ -516,6 +516,16 @@ img {
     margin-right: 0;
     font-size: 18px;
   }
+
+  .header-left{
+    display: -webkit-flex;
+       display: -moz-flex;
+        display: -ms-flex;
+         display: -o-flex;
+            display: flex;
+  }
+  /*пофиксилась менюха для IE11*/
+
 }
 
 
@@ -595,20 +605,20 @@ img {
 /*слайдер*/
   .about-company__foto-slider{
     /*position: relative;*/
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
     width: 300px;
     margin: 0 auto;
     margin-bottom: 40px;
     margin-top: 20px;
   }
   .about-company__slider-item {
-    margin-right: 5px;
-    margin-left: 5px;
+   /* padding-right: 5px;
+    padding-left: 5px;*/
   }
 
-  /*для высвечивания элементов, потом убрать*/
   .about-company {
     position: relative;
-    /*background-color: #ccc;*/
   }
 
   /*красивые дотсы по дизайну*/
@@ -667,10 +677,10 @@ img {
     background-color: rgba(46,50,61,0.5);
   }
   .slick-prev{
-    left: 5px;
+    left: 0px;
   }
   .slick-next{
-    right: 5px;
+    right: 0px;
   }
 
   .slick-prev:before{
@@ -702,8 +712,6 @@ img {
 
     transform: rotate(180deg);
   }
-
-
 
 }
 
@@ -861,5 +869,38 @@ img {
     font-size:24px;
     line-height: 30px;
   }
+
+}
+
+/*Закончил блок со слайдером о компании*/
+.stages{
+  width: 1170px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.stages-container{
+
+  display: -webkit-flex;
+     display: -moz-flex;
+      display: -ms-flex;
+       display: -o-flex;
+          display: flex;
+-webkit-flex-wrap: wrap;
+   -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+     -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+/*justify-content: center;*/
+justify-content: space-between;
+
+  list-style-type:none;
+}
+
+.stages-item{
+  width: 370px;
+  height: 370px;
+  background-color: #49505c;
+  margin-bottom: 35px;
+
 
 }

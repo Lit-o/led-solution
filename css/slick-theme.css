@@ -55,9 +55,9 @@
 background-color: rgba(46,50,61,0.8);
 }
 .slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
+/*.slick-prev:focus:before,*/
+.slick-next:hover:before
+/*.slick-next:focus:before*/
 {
     opacity: 1;
 }
