@@ -873,13 +873,25 @@ img {
 }
 
 /*Закончил блок со слайдером о компании*/
+
 .stages{
   width: 1170px;
   margin: 0 auto;
   margin-top: 150px;
 }
-.stages-container{
 
+.stages-title{
+  margin-bottom: 60px;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight:500;
+  text-align:center;
+  font-size:48px;
+  line-height: 52px;
+  color: #2e323d;
+}
+
+.stages-container{
   display: -webkit-flex;
      display: -moz-flex;
       display: -ms-flex;
@@ -890,17 +902,74 @@ img {
     -ms-flex-wrap: wrap;
      -o-flex-wrap: wrap;
         flex-wrap: wrap;
-/*justify-content: center;*/
 justify-content: space-between;
 
   list-style-type:none;
 }
 
 .stages-item{
+  position: relative;
+
   width: 370px;
   height: 370px;
   background-color: #49505c;
   margin-bottom: 35px;
 
-
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
+.stages-item:nth-child(1){
+  background-image: url(../img/step-1.jpg);
+}
+.stages-item:nth-child(2){
+  background-image: url(../img/step-2.jpg);
+}
+.stages-item:nth-child(3){
+  background-image: url(../img/step-3.jpg);
+}
+.stages-item:nth-child(4){
+  background-image: url(../img/step-4.jpg);
+}
+.stages-item:nth-child(5){
+  background-image: url(../img/step-5.jpg);
+}
+.stages-item:nth-child(6){
+  background-image: url(../img/step-6.jpg);
+}
+
+.stages-description{
+  margin: 0 auto;
+  margin-top: 205px;
+  width: 220px;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  text-align:center;
+  font-size:18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.stages-number{
+  position: absolute;
+  bottom: 35px;
+
+  width: 100%;
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  text-align:center;
+  font-size:24px;
+  line-height: 30px;
+  color: #fa8c15;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .stages{
+    width: 690px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+}
+
