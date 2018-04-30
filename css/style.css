@@ -1033,7 +1033,18 @@ justify-content: space-between;
       box-shadow: 0 0 5px rgba(0,0,0,0.5);
       margin-bottom: 40px;
     }
-
+    ol .slick-next.slick-arrow{
+      height: 370px;
+      width: 100px;
+      padding-left: 70px;
+      background-color: rgba(0,0,0,0);
+    }
+    ol .slick-prev.slick-arrow{
+      width: 100px;
+      padding-right: 65px;
+      height: 370px;
+      background-color: rgba(0,0,0,0);
+    }
   }
 
 
