@@ -56,6 +56,7 @@ $( document ).ready(function() {
   //   });
   // }
 
+  // рабочий слайдер о компании
   $('.about-company__foto-slider').slick({
     // autoplay: true,
     autoplaySpeed: 2000,
@@ -65,6 +66,36 @@ $( document ).ready(function() {
     dots: true,
     pauseOnDotsHover: true,
   });
+
+
+  // делаю слайдер для мобильной версии
+
+  checkMedia(); // запускаем чек окна при открытии страницы
+  $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
+    checkMedia();
+  });
+
+  function checkMedia() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      $('.stages-container').slick();
+      $('.stages').find('ol').removeClass('stages-container--mobile').addClass('stages-container');
+      $('.stages-container').slick('unslick');
+      }
+
+    if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
+      $('.stages').find('ol').removeClass('stages-container').addClass('stages-container--mobile');
+      $('.stages-container--mobile').slick({
+        // autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 600,
+        // centerMode: true,
+        // centerPadding: '0px',
+        dots: false,
+        // pauseOnDotsHover: true,
+      });
+      }
+    }
+
 
 });
 

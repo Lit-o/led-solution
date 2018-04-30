@@ -874,6 +874,9 @@ img {
 
 /*Закончил блок со слайдером о компании*/
 
+/*Начинаю блок с этапами - далеко не мобайл ферст,
+ибо сложная структура*/
+
 .stages{
   width: 1170px;
   margin: 0 auto;
@@ -920,22 +923,22 @@ justify-content: space-between;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.stages-item:nth-child(1){
+.stages-item.stages-number-1{
   background-image: url(../img/step-1.jpg);
 }
-.stages-item:nth-child(2){
+.stages-item.stages-number-2{
   background-image: url(../img/step-2.jpg);
 }
-.stages-item:nth-child(3){
+.stages-item.stages-number-3{
   background-image: url(../img/step-3.jpg);
 }
-.stages-item:nth-child(4){
+.stages-item.stages-number-4{
   background-image: url(../img/step-4.jpg);
 }
-.stages-item:nth-child(5){
+.stages-item.stages-number-5{
   background-image: url(../img/step-5.jpg);
 }
-.stages-item:nth-child(6){
+.stages-item.stages-number-6{
   background-image: url(../img/step-6.jpg);
 }
 
@@ -1005,4 +1008,33 @@ justify-content: space-between;
     bottom: 30px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .stages{
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    .stages-title{
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+    .stages-description{
+      font-size: 18px;
+    }
+
+    .stages-item{
+      margin-bottom: 0;
+    }
+    .stages-container--mobile{
+      -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+      margin-bottom: 40px;
+    }
+
+  }
+
+
 
