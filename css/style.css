@@ -40,6 +40,19 @@ img {
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect (0 0 0 0);
+  overflow: hidden;
+
+  z-index: -1;
+}
+
 /*---Header---*/
 
 .main-header {
@@ -767,7 +780,9 @@ img {
     line-height: 21px;
     color: #2e323d;
   }
-
+  .about-company__foto-title{
+    width: 100%;
+  }
   .about-company__foto-slider{
     /*position: relative;*/
     width: 690px;
@@ -1016,11 +1031,13 @@ justify-content: space-between;
       margin: 0 auto;
       margin-top: 40px;
     }
+
     .stages-title{
       font-size: 20px;
       line-height: 20px;
       margin-bottom: 20px;
     }
+
     .stages-description{
       font-size: 18px;
     }
@@ -1028,17 +1045,20 @@ justify-content: space-between;
     .stages-item{
       margin-bottom: 0;
     }
+
     .stages-container--mobile{
       -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
       box-shadow: 0 0 5px rgba(0,0,0,0.5);
       margin-bottom: 40px;
     }
+
     ol .slick-next.slick-arrow{
       height: 370px;
       width: 100px;
       padding-left: 70px;
       background-color: rgba(0,0,0,0);
     }
+
     ol .slick-prev.slick-arrow{
       width: 100px;
       padding-right: 65px;
@@ -1047,5 +1067,138 @@ justify-content: space-between;
     }
   }
 
+/*              Закончил блок с этапами работы              */
 
+/*              Заявка на визуализацию              */
+
+
+  .visualization {
+    width: 100%;
+    height: 560px;
+    margin-top: 95px;
+
+    background-image: url(../img/visualization.jpg);
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .visualization-container{
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .visualization-title{
+    padding-top: 120px;
+    width: 435px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    font-size:36px;
+    line-height: 42px;
+    color: #fff;
+  }
+  .visualization-description{
+    margin-top: 45px;
+    width: 455px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight:400;
+    font-size:20px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  .visualization-description-side{
+    display: inline-block;
+    margin-right: 270px;
+  }
+  .visualization-form {
+    display: inline-block;
+    width: 340px;
+    text-align: center;
+  }
+
+  .visualization-form-input {
+  width: 340px;
+  height: 40px;
+  padding-left: 25px;
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  font-size: 16px;
+  color: #4a4a4a;
+
+  background-color: rgba(255,255,255, 0.75);
+
+  border: 0px solid #bdc9d5;
+  border-radius: 20px;
+  }
+  .visualization-form-input:focus {
+    outline: 0;
+  -webkit-box-shadow: inset 0px 0px 10px 1px #fa8c15;
+          box-shadow: inset 0px 0px 10px 1px #fa8c15;
+  }
+
+  .form-flex-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .visualization__form-buttom {
+  display: inline-block;
+  width: 160px;
+  height: 40px;
+  margin-bottom: 15px;
+  padding:0 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  border: 0px;
+  border-radius: 20px;
+  background-color: #fa8c15;
+
+  vertical-align: middle;
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  font-size: 16px;
+  color: #fff;
+  line-height: 40px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+
+  }
+  .visualization__form-buttom:focus {
+    outline: 0;
+  -webkit-box-shadow: inset 0px 0px 10px 1px #fa8c15;
+          box-shadow: inset 0px 0px 10px 1px #fa8c15;
+  }
+
+.visualization-check {
+  width: 340px;
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  font-size: 14px;
+  color: #fff;
+  /*line-height: 40px;*/
+}
+
+.visualization-check a{
+  font-family: roboto, Arial, sans-serif;
+  font-weight:400;
+  font-size: 14px;
+  color: #fa8c15;
+  text-decoration: underline;
+}
 
