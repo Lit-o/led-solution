@@ -1365,3 +1365,43 @@ justify-content: space-between;
 }
 
 /*блок с визуализацией закончен*/
+
+/*начинаю блок с нашими работами*/
+
+.our-works {
+  width: 1170px;
+  margin: 0 auto;
+  margin-top: 140px;
+}
+
+.our-works__title{
+  text-align: center;
+  font-family: roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: #2e323d;
+  line-height: 52px;
+}
+
+.our-works__container {
+  margin-top: 75px;
+  width: 100%;
+}
+
+.our-works__item {
+  width: 370px;
+
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.our-works__container-title {
+  padding: 20px;
+
+  font-family: roboto, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #2e323d;
+  line-height: 30px;
+}
+
