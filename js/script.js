@@ -30,6 +30,20 @@ $( document ).ready(function() {
     pauseOnDotsHover: true,
   });
 
+  // рабочий слайдер наши работы
+  $('.our-works__container').slick({
+    // autoplay: true,
+    autoplaySpeed: 2100,
+    speed: 1000,
+    centerMode: true,
+    centerPadding: '0px',
+    dots: false,
+    pauseOnDotsHover: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  });
+
 
   // делаю слайдер для мобильной версии этапов работы
 
