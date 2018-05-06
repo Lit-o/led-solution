@@ -1653,3 +1653,49 @@ justify-content: space-between;
 }
 
 /*Закончил каруселить карусели для готовых проектов с мобиле фирст*/
+
+@media (min-width: 320px) {
+  .specialist-call {
+    width: 310px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #e9e9e9;
+    text-align: center;
+  }
+  .specialist-call .visualization__form-buttom{
+    width: auto;
+  }
+  .specialist-call__description {
+    padding: 20px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #2e323d;
+    line-height: 24px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .specialist-call {
+    width: 690px;
+    background-color: #e9e9e9;
+  }
+}
+
+@media (min-width: 1280px) {
+  .specialist-call {
+    width: 1150px;
+    background-color: #e9e9e9;
+  }
+  .specialist-call__description {
+    font-size: 20px;
+    padding: 20px 90px;
+  }
+  .specialist-call .visualization__form-buttom{
+    font-size: 20px;
+  }
+}
+
+
