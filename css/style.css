@@ -223,15 +223,14 @@ img {
     display: block;
   }
 
-  .callback-options{
+  .callback-options {
     display: none;
   }
 
 }
 
 @media (min-width: 768px) {
-  .header-container{
-
+  .header-container {
     height: 60px;
     width: 100%;
     margin: 0 auto;
@@ -241,6 +240,7 @@ img {
   .logo-link {
     margin-left: 29px;
   }
+
   .logo-img-desctop {
     width: 46px;
     height: 34px;
@@ -252,7 +252,7 @@ img {
 }
 
 @media (min-width: 1280px) {
-  .burger-menu{
+  .burger-menu {
     display: none;
   }
   .header-burger {
@@ -1458,7 +1458,7 @@ justify-content: space-between;
   .prise{
     margin-right: 15px;
   }
-  .our-works__container .slick-prev {
+  /*.our-works__container .slick-prev {
     left: 5px;
     height: 72px;
 
@@ -1469,7 +1469,55 @@ justify-content: space-between;
     right: 4px;
     height: 72px;
 
+    margin-top: 18px; старый вид кнопок с темным бекграйндом
+  }*/
+  .our-works__container .slick-prev {
+    left: 15px;
+    width: 24px;
+    height: 72px;
     margin-top: 18px;
+
+    background-color: rgba(0,0,0,0);
+  }
+  .our-works__container .slick-next {
+    right: 15px;
+    width: 24px;
+    height: 72px;
+    margin-top: 18px;
+
+    background-color: rgba(0,0,0,0);
+  }
+  .our-works__container .slick-prev:before{
+    content:'';
+    display: block;
+    width: 24px;
+    height: 40px;
+    margin-left: 0px;
+    text-align: left;
+
+    background-image: url(../img/next.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+
+  }
+  .our-works__container .slick-next:before{
+    content:'';
+    display: block;
+    width: 24px;
+    height: 40px;
+    margin-left: 0;
+    text-align: left;
+
+    background-image: url(../img/next.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    transform: rotate(-180deg);
   }
 
 
@@ -1654,6 +1702,7 @@ justify-content: space-between;
 
 /*Закончил каруселить карусели для готовых проектов с мобиле фирст*/
 
+/*Мини-секция с вызовом замерщика-специалиста*/
 @media (min-width: 320px) {
   .specialist-call {
     width: 310px;
@@ -1662,7 +1711,7 @@ justify-content: space-between;
     background-color: #e9e9e9;
     text-align: center;
   }
-  .specialist-call .visualization__form-buttom{
+  .specialist-call .visualization__form-buttom {
     width: auto;
   }
   .specialist-call__description {
@@ -1693,9 +1742,32 @@ justify-content: space-between;
     font-size: 20px;
     padding: 20px 90px;
   }
-  .specialist-call .visualization__form-buttom{
+  .specialist-call .visualization__form-buttom {
     font-size: 20px;
   }
 }
 
 
+/*        Делаю секцию про материалы/ресурсы        */
+
+
+
+@media(min-width: 1280px) {
+  .our-resourses{
+    width: 1170px;
+    margin: 0 auto;
+  }
+  .our-resourses__title {
+    width: 860px;
+    margin: 0 auto;
+    margin-top: 110px;
+    padding: 5px 10px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight:500;
+    text-align:center;
+    font-size:36px;
+    line-height: 42px;
+    color: #2e323d;
+  }
+}
