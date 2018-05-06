@@ -1770,4 +1770,44 @@ justify-content: space-between;
     line-height: 42px;
     color: #2e323d;
   }
+  .our-resourses__flex-container {
+    display: -webkit-flex;
+       display: -moz-flex;
+        display: -ms-flex;
+         display: -o-flex;
+            display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  .our-resourses__item{
+    width: 370px;
+    height: 500px;
+
+    text-align: center;
+
+    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  }
+  .our-resourses__img{
+    padding: 25px 0;
+  }
+
+  .our-resourses__item-title {
+    padding: 0 15px;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #2e323d;
+    line-height: 30px;
+  }
+
+  .our-resourses__description {
+    padding: 0 20px;
+    margin-top: 20px;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #2e323d;
+    line-height: 22px;
+  }
 }
