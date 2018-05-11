@@ -1908,7 +1908,9 @@ justify-content: space-between;
   .our-resourses__item{
     width: 690px;
     height: 210px;
+    margin: 0 0;
     margin-bottom: 25px;
+
 
 
     -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
@@ -2085,6 +2087,143 @@ justify-content: space-between;
     background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
     background-position: -0px -63px;
+  }
+}
+
+@media (min-width: 768px) {
+  .our-features {
+    width: 690px;
+    height: 185px;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    font-size:0px;
+  }
+
+  .feature-item {
+    display: inline-block;
+    width: 31%;
+    padding: 1%;
+    padding-top: 100px;
+
+    font-size:16px;
+    line-height: 24px;
+
+    vertical-align: top;
+  }
+
+  .feature-item:first-child{
+    padding-left: 0;
+  }
+
+  .feature-item:last-child{
+    padding-right: 0;
+  }
+
+  .feature-item.guarantee::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 19px;
+  }
+  .feature-item.certification::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 105px;
+    top: 17px;
+    /*margin: 0 auto; подгонял вручную, ибо странная
+    иконка с отсветом в сторону*/
+  }
+
+  .feature-item.montage::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 15px;
+  }
+}
+
+/*Блок по дизайну сверстан, но совсем не защищен от перенаполнения*/
+@media (min-width: 1280px) {
+  .our-features {
+    width: 1170px;
+    height: 100px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: left;
+
+    font-size:0px;
+  }
+
+  .feature-item {
+    display: inline-block;
+    /*width: 31%;
+    padding: 0 1%;*/
+    padding-top: 30px;
+
+    font-size:16px;
+    line-height: 24px;
+
+    vertical-align: top;
+  }
+
+  .feature-item.guarantee {
+    width: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 134px;
+    padding-right: 0;
+  }
+  .feature-item.certification {
+    width: 472px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 182px;
+    padding-right: 0;
+  }
+  .feature-item.montage {
+    width: 395px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 134px;
+    padding-right: 0;
+  }
+
+  .feature-item.guarantee::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 42px;
+    top: 19px;
+    margin: 0;
+  }
+  .feature-item.certification::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 116px;
+    top: 17px;
+    /*margin: 0 auto; подгонял вручную, ибо странная
+    иконка с отсветом в сторону*/
+  }
+
+  .feature-item.montage::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 59px;
+    top: 15px;
+    margin: 0;
   }
 }
 
