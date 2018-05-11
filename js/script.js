@@ -1,6 +1,11 @@
 $( document ).ready(function() {
+
+
   // включаю маску для телефона
+
   $("#phone-mask").mask("+7 (999) -999 -9999");
+
+
   // подключаю мобильное меню
 
   $( ".header-cross" ).hide();
@@ -19,7 +24,9 @@ $( document ).ready(function() {
     });
   });
 
+
   // рабочий слайдер о компании
+
   $('.about-company__foto-slider').slick({
     autoplay: true,
     autoplaySpeed: 2100,
@@ -30,7 +37,9 @@ $( document ).ready(function() {
     pauseOnDotsHover: true,
   });
 
+
   // рабочий слайдер наши работы
+
   $('.our-works__container').slick({
   dots: false,
   infinite: true,
@@ -58,9 +67,9 @@ $( document ).ready(function() {
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
-    // надо запомнить эту фичу
+    // надо запомнить и попробовать эту фичу
   ]
-});
+  });
 
 
   // делаю слайдер для мобильной версии этапов работы
@@ -89,7 +98,79 @@ $( document ).ready(function() {
     }
 
 
+  // Слайдер наши материалы
+
+  // Первый вариант с вшитыми возможностями 'slick'
+
+  // $('.our-resourses__container').slick({
+  // dots: false,
+  // infinite: true,
+  // speed: 300,
+  // slidesToShow: 1,
+  // slidesToScroll: 1,
+  // responsive: [
+  //   {
+  //     breakpoint: 1920,
+  //     settings: 'unslick'
+  //   },
+  //   {
+  //     breakpoint: 767,
+  //     settings: {
+  //       dots: false,
+  //       infinite: true,
+  //       speed: 300,
+  //       slidesToShow: 1,
+  //       slidesToScroll: 1
+  //     }
+  //   }
+  // ]
+  // });
 });
+
+  // Попробовал эту фичу с unslick - все хорошо, но беда в том,
+  // что она срабатывает только один раз после загрузки сайта.
+  // Доходя до условия "unslick" слайдер выключается совсем.
+  // В итоге предлагаемая конструкция имеет место быть, но
+  // как по мне, очень уж она специфичная и одноразовая. Найденное и
+  // адаптированное под slick мной решение с checkMedia() считаю лучше.
+
+  // Слайдер наши материалы
+
+  // Мое решение
+
+$(document).ready(function(){
+    checkMedia(); // запускаем чек окна при открытии страницы
+  $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
+    checkMedia();
+  });
+
+  function checkMedia() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+            $('.our-resourses__container').slick('unslick');
+      }
+
+    if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
+      $('.our-resourses__container').slick({
+        autoplay: false,
+        infinite: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+      }
+    }
+});
+
+
+
+
+
+
+
+
+
 
 // это для вставки фотки
 // срипт не мой, должен был имя файла вставлять вместо
