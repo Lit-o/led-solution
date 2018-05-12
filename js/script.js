@@ -96,7 +96,7 @@ $( document ).ready(function() {
       });
       }
     }
-
+});
 
   // Слайдер наши материалы
 
@@ -125,7 +125,7 @@ $( document ).ready(function() {
   //   }
   // ]
   // });
-});
+
 
   // Попробовал эту фичу с unslick - все хорошо, но беда в том,
   // что она срабатывает только один раз после загрузки сайта.
@@ -138,20 +138,22 @@ $( document ).ready(function() {
 
   // Мое решение
 
+  // Решил задачу проще, чем в прошлый раз, изменив очередность проверки checkMedia()
+
 $(document).ready(function(){
-    checkMedia(); // запускаем чек окна при открытии страницы
+
   $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
     checkMedia();
-  });
+  })
+  checkMedia(); // запускаем чек окна при открытии страницы
 
   function checkMedia() {
     if (window.matchMedia('(min-width: 768px)').matches) {
-            $('.our-resourses__container').slick('unslick');
+      $('.our-resourses__container').slick('unslick');
       }
-
-    if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
+    else {
       $('.our-resourses__container').slick({
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         autoplaySpeed: 3000,
         speed: 1000,
@@ -162,6 +164,9 @@ $(document).ready(function(){
       }
     }
 });
+
+
+
 
 
 
