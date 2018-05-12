@@ -4,6 +4,7 @@ $( document ).ready(function() {
   // включаю маску для телефона
 
   $("#phone-mask").mask("+7 (999) -999 -9999");
+  $("#phone-mask-questions").mask("+7 (999) -999 -9999");
 
 
   // подключаю мобильное меню
