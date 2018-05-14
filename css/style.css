@@ -1219,6 +1219,14 @@ justify-content: space-between;
     color: #fa8c15;
     text-decoration: underline;
   }
+
+
+  .visualization-check label {
+    vertical-align: top;
+  }
+  .visualization-check label a {
+    vertical-align: top;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2109,6 +2117,7 @@ justify-content: space-between;
   .our-features {
     width: 1170px;
     height: 100px;
+    margin-top: 40px;
     padding: 0px;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -2263,8 +2272,8 @@ justify-content: space-between;
     margin: 0 auto;
     padding-top: 40px;
 
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 36px;
     color: #2e323d;
   }
   .sertification__container{
@@ -2308,8 +2317,254 @@ justify-content: space-between;
 
 /*              Закончил стилизовать сертификаты              */
 
-/*              Начинаю стилизовать форму Остались вопросы            */
-/*              Стилизую не по mobile-firs ибо будут стили отличаться             */
+/*              Начинаю стилизовать форму "Остались вопросы"            */
+
+/*              Стилизую не по mobile-firs ибо будут стили отличаться,
+и, возможно, будет меняться дизайн для разного разрешения, поэтому делаю независимыми
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .questions {
+    height: 460px;
+    width: 100%;
+    margin-top: 40px;
+
+    background-image: url(../img/questions.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .questions__title {
+    padding-top: 40px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+  }
+  .questions__description {
+    padding-top: 25px;
+    width: 290px;
+    margin: 0 auto;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+  }
+  .questions__form {
+    width: 310px;
+    margin: 0 auto;
+    margin-top: 25px;
+    text-align: center;
+
+    font-size: 0;
+  }
+
+  .questions-form__input{
+    width: 290px;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7f7f7f;
+
+    border: 0;
+    border-right: 1px solid #d5d5d5;
+    border-radius: 20px;
+
+    background-color: #fff;
+  }
+
+  .questions-form__input:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0px 0px 10px 1px #fa8c15;
+            box-shadow: inset 0px 0px 10px 1px #fa8c15;
+  }
+
+  .question-form__button {
+    width: 290px;
+    height: 40px;
+    margin-top: 5px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    vertical-align: top;
+
+    background-color: #fa8c15;
+    border-radius: 20px;
+    border: 0;
+    border-right: 0px solid #d5d5d5;
+
+    transition: all 0.3s ease;
+  }
+
+  .question-form__button:hover {
+    -webkit-box-shadow: inset 0 0 10px #501b88;
+    box-shadow: inset 0 0 10px #501b88;
+  }
+
+  .question-form__button:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0px 0px 10px 1px #501b88;
+            box-shadow: inset 0px 0px 10px 1px #501b88;
+  }
+
+  .visualization-check.questions-check{
+    padding: 0;
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+  }
+
+  /*выравниваю чекбоксовое окно*/
+  .visualization-check.questions-check label {
+    vertical-align: top;
+  }
+  .visualization-check.questions-check label a {
+    vertical-align: top;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .questions {
+    height: 280px;
+    width: 100%;
+    margin-top: 40px;
+
+    background-image: url(../img/questions.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  .questions__title {
+    padding-top: 40px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+    line-height: 36px;
+    color: #fff;
+  }
+  .questions__description {
+    padding-top: 25px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+  }
+  .questions__form {
+    width: 728px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+
+    font-size: 0;
+  }
+
+  .questions-form__input{
+    width: 240px;
+    height: 40px;
+    padding-left: 15px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7f7f7f;
+
+    border: 0;
+    border-right: 1px solid #d5d5d5;
+    border-radius: 0px;
+
+    background-color: #fff;
+  }
+
+  .questions-form__input:first-child {
+    width: 175px;
+    padding-left: 20px;
+    border-radius: 20px 0px 0px 20px;
+  }
+  #phone-mask-questions {
+    width: 175px;
+  }
+
+  .questions-form__input:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0px 0px 10px 1px #fa8c15;
+            box-shadow: inset 0px 0px 10px 1px #fa8c15;
+  }
+
+  .question-form__button {
+    width: 130px;
+    height: 40px;
+
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    vertical-align: top;
+
+    background-color: #fa8c15;
+    border-radius: 0px 20px 20px 0px;
+    border: 0;
+    border-right: 0px solid #d5d5d5;
+
+    transition: all 0.3s ease;
+  }
+
+  .question-form__button:hover {
+    -webkit-box-shadow: inset 0 0 10px #501b88;
+    box-shadow: inset 0 0 10px #501b88;
+  }
+
+  .question-form__button:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0px 0px 10px 1px #501b88;
+            box-shadow: inset 0px 0px 10px 1px #501b88;
+  }
+
+  .visualization-check.questions-check{
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  /*выравниваю чекбоксовое окно*/
+
+  .visualization-check.questions-check label {
+    vertical-align: top;
+  }
+  .visualization-check.questions-check label a {
+    vertical-align: top;
+  }
+}
 
 @media (min-width: 1280px) {
   .questions {
@@ -2370,10 +2625,10 @@ justify-content: space-between;
 
     background-color: #fff;
   }
+
   .questions-form__input:first-child {
     border-radius: 20px 0px 0px 20px;
   }
-
 
   .questions-form__input:focus {
     outline: 0;
@@ -2400,10 +2655,12 @@ justify-content: space-between;
 
     transition: all 0.3s ease;
   }
+
   .question-form__button:hover {
     -webkit-box-shadow: inset 0 0 10px #501b88;
     box-shadow: inset 0 0 10px #501b88;
   }
+
   .question-form__button:focus {
     outline: 0;
     -webkit-box-shadow: inset 0px 0px 10px 1px #501b88;
@@ -2411,10 +2668,144 @@ justify-content: space-between;
   }
 
   .visualization-check.questions-check{
+
     margin: 0 auto;
     margin-top: 20px;
   }
+
+  /*выравниваю чекбоксовое окно*/
+
+  .visualization-check.questions-check label {
+    vertical-align: center;
+  }
+  .visualization-check.questions-check label a {
+    vertical-align: center;
+  }
 }
+
+/*              Закончил блок Остались вопросы             */
+
+/*              Начинаю блок Контакты                */
+
+@media (min-width: 320px) {
+
+  .our-contacts__title {
+    padding-top: 40px;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 20px;
+    line-height: 26px;
+    color: #2e323d;
+  }
+
+  .our-contacts__ico-container {
+    width: 310px;
+    margin: 0 auto;
+    display: -webkit-flex;
+       display: -moz-flex;
+        display: -ms-flex;
+         display: -o-flex;
+            display: flex;
+    -webkit-flex-wrap: wrap;
+       -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+         -o-flex-wrap: wrap;
+            flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .our-contacts__number {
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+
+    text-align: center;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+    color: #2e323d;
+  }
+
+  .our-contacts__number::before {
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    left: 20px;
+
+    display: inline-block;
+
+    background: url('../img/sprite.png') no-repeat;
+    background-position: -0px -168px; width: 35px; height: 35px;
+
+  }
+
+  .our-contacts__mail {
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+
+    text-align: center;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 35px;
+    color: #2e323d;
+
+
+  }
+  .our-contacts__mail::before {
+    content: '';
+
+    position: absolute;
+    top: 0px;
+    left: 20px;
+
+    display: inline-block;
+
+    background: url('../img/sprite.png') no-repeat;
+    background-position: -0px -133px; width: 35px; height: 35px;
+  }
+
+  .our-contacts__address{
+    position: relative;
+
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 75px;
+    padding-right: 70px;
+
+    vertical-align: top;
+    text-align: center;
+    font-family: roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2e323d;
+  }
+
+  .our-contacts__address::before {
+    content: '';
+
+    position: absolute;
+    top:0;
+    left: 20px;
+
+    display: inline-block;
+
+    background: url('../img/sprite.png') no-repeat;
+    background-position: -0px -203px; width: 35px; height: 35px;
+  }
+}
+
+
+
+
+
 
 /* Generated by http://css.spritegen.com CSS Sprite Generator */
 
