@@ -57,7 +57,7 @@ img {
   z-index: -1;
 }
 
-/*---Header---*/
+/*              Header              */
 
 .main-header {
   background-color: #fff;
@@ -214,10 +214,29 @@ img {
     line-height: 35px;
     color: #fff;
 
+    border: 0px solid #000;
+
     border-radius: 18px;
     background-color: #fa8c15;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
   }
 
+  .button-callback:focus, .button-callback:hover {
+    outline: 0;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #501b88;
+            box-shadow: inset 0px 0px 10px 0px #501b88;
+  }
+
+  .header-number, .callback-text {
+    transition: all 0.3s ease;
+  }
+
+  .header-number:hover,
+  .callback-text:hover {
+    color: #fa8c15;
+  }
 
   .header-right {
     display: block;
@@ -317,20 +336,16 @@ img {
 
   .button-callback {
     display: inline-block;
-    /*width: 140px;*/
+
     flex-shrink: 0;
     height: 40px;
     padding: 0 23px;
     margin-top: 21px;
-    /*margin-right: 26px;*/
     margin-left: 32px;
     margin-right: 0;
-
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 
     font-size:16px;
     line-height: 40px;
@@ -341,10 +356,10 @@ img {
   .header-contacts{
     width: 400px;
     display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+       display: -moz-flex;
+        display: -ms-flex;
+         display: -o-flex;
+            display: flex;
 
     /*justify-content: space-between;*/
   }
@@ -1089,11 +1104,11 @@ justify-content: space-between;
     background-repeat: no-repeat;
     background-position: 70% 50%;
   }
-  .visualization-container{
+  .visualization-container {
     width: 310px;
     margin: 0 auto;
   }
-  .visualization-title{
+  .visualization-title {
     padding-top: 40px;
     width: 245px;
 
@@ -1104,7 +1119,7 @@ justify-content: space-between;
     color: #fff;
   }
 
-  .visualization-description{
+  .visualization-description {
     margin-top: 25px;
     width: 280px;
 
@@ -1115,7 +1130,7 @@ justify-content: space-between;
     color: #fff;
   }
 
-  .visualization-description-side{
+  .visualization-description-side {
     display: block;
     margin: 0 auto;
     margin-left: 15px;
@@ -1196,10 +1211,11 @@ justify-content: space-between;
     cursor: pointer;
     overflow: hidden;
   }
-  .visualization__form-buttom:focus {
+
+  .visualization__form-buttom:focus, .visualization__form-buttom:hover {
     outline: 0;
-    -webkit-box-shadow: inset 0px 0px 10px 1px #fa8c15;
-            box-shadow: inset 0px 0px 10px 1px #fa8c15;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #501b88;
+            box-shadow: inset 0px 0px 10px 0px #501b88;
   }
 
   .visualization-check {
@@ -1212,7 +1228,7 @@ justify-content: space-between;
     color: #fff;
   }
 
-  .visualization-check a{
+  .visualization-check a {
     font-family: roboto, Arial, sans-serif;
     font-weight:400;
     font-size: 14px;
@@ -1220,8 +1236,11 @@ justify-content: space-between;
     text-decoration: underline;
   }
 
-
+  .visualization-check input {
+    cursor: pointer;
+  }
   .visualization-check label {
+    cursor: pointer;
     vertical-align: top;
   }
   .visualization-check label a {
