@@ -22,11 +22,11 @@
 
         <nav class="burger-menu" id="menu__mob">
           <ul class="burger-menu-list">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Этапы работы</a></li>
-            <li><a href="#">Визуализация</a></li>
-            <li><a href="#">Наши работы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#about-company">О нас</a></li>
+            <li><a href="#stages">Этапы работы</a></li>
+            <li><a href="#visualization">Визуализация</a></li>
+            <li><a href="#our-works">Наши работы</a></li>
+            <li><a href="#our-contacts">Контакты</a></li>
           </ul>
         </nav>
 
@@ -36,13 +36,13 @@
           </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="menu">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Этапы работы</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Визуализация</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Наши работы</a></li>
-            <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+            <li class="main-nav__item"><a href="#about-company" class="main-nav__link">О нас</a></li>
+            <li class="main-nav__item"><a href="#stages" class="main-nav__link">Этапы работы</a></li>
+            <li class="main-nav__item"><a href="#visualization" class="main-nav__link">Визуализация</a></li>
+            <li class="main-nav__item"><a href="#our-works" class="main-nav__link">Наши работы</a></li>
+            <li class="main-nav__item"><a href="#our-contacts" class="main-nav__link">Контакты</a></li>
           </ul>
         </nav>
       </div>
@@ -73,7 +73,7 @@
       <a href="" class="button-callback button-callback__wellcome">Оставить заявку</a>
     </section>
 
-    <section class="about-company">
+    <section class="about-company" id="about-company">
       <div class="about-company__gradient-container">
         <div class="about-company__container">
           <h2 class="about-company-title">О компании</h2>
@@ -110,7 +110,7 @@
       </div>
     </section>
 
-    <section class="stages">
+    <section class="stages" id="stages">
       <h2 class="stages-title">Этапы работы</h2>
       <ol class="stages-container">
         <li class="stages-item stages-number-1">
@@ -145,7 +145,7 @@
       </ol>
     </section>
 
-    <section class="visualization">
+    <section class="visualization" id="visualization">
       <div class="visualization-container">
         <div class="visualization-description-side">
           <h2 class="visually-hidden">Бесплатная визуализация светодиодной подсветки квартиры в Санкт-Петербурге по фотографии
@@ -181,7 +181,7 @@
 
           <div class="visualization-check">
             <input type="checkbox" name="agree" id="visualization-check" required>
-            <label for="visualization-check">Я согласен на  <a href="http://tdsvt.ru/info/processing/" target="_blank">обработку персональных данных</a></label>
+            <label for="visualization-check">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
           </div>
         </form>
       </div>
@@ -189,7 +189,7 @@
 
 
 
-    <section class="our-works">
+    <section class="our-works" id="our-works">
       <h2 class="our-works__title">Некоторые наши работы</h2>
 
       <!-- Заменить на ul li пункты с работами -->
@@ -363,12 +363,12 @@
 
           <div class="visualization-check questions-check">
             <input type="checkbox" name="agree" id="question-check" required>
-            <label for="question-check">Я согласен на  <a href="http://tdsvt.ru/info/processing/" target="_blank">обработку персональных данных</a></label>
+            <label for="question-check">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
           </div>
        </form>
     </section>
 
-    <section class="our-contacts">
+    <section class="our-contacts" id="our-contacts">
       <h2 class="our-contacts__title">Контакты</h2>
       <div class="our-contacts__ico-container">
         <a href="tel://+79219152629" class="our-contacts__number">+7 (812) 915-26-29</a>
@@ -377,9 +377,12 @@
 ул. Дибуновская, д.45</p>
       </div>
       <div class="our-contacts__button-container">
-        <button class="our-contacts__call-button">Заказать звонок</button><button class="our-contacts__map-button">Посмотреть на карте</button>
+        <button class="our-contacts__call-button">Заказать звонок</button>
+        <button class="our-contacts__map-button">Посмотреть на карте</button>
       </div>
     </section>
+
+    <div id="scroll-top-btn"></div>
 
   </main>
 

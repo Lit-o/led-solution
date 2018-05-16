@@ -39,6 +39,32 @@ $( document ).ready(function() {
   });
 
 
+  // делаю слайдер для мобильной версии этапов работы
+
+  checkMedia(); // запускаем чек окна при открытии страницы
+  $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
+    checkMedia();
+  });
+
+  function checkMedia() {
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      $('.stages-container').slick();
+      $('.stages').find('ol').removeClass('stages-container--mobile').addClass('stages-container');
+      $('.stages-container').slick('unslick');
+      }
+
+    if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
+      $('.stages').find('ol').removeClass('stages-container').addClass('stages-container--mobile');
+      $('.stages-container--mobile').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        dots: false,
+      });
+      }
+    }
+
+
   // рабочий слайдер наши работы
 
   $('.our-works__container').slick({
@@ -73,34 +99,9 @@ $( document ).ready(function() {
   });
 
 
+  // Слайдер для сертификатов
 
-
-  // делаю слайдер для мобильной версии этапов работы
-
-  checkMedia(); // запускаем чек окна при открытии страницы
-  $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
-    checkMedia();
-  });
-
-  function checkMedia() {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      $('.stages-container').slick();
-      $('.stages').find('ol').removeClass('stages-container--mobile').addClass('stages-container');
-      $('.stages-container').slick('unslick');
-      }
-
-    if (window.matchMedia('(min-width: 320px) and (max-width: 767px)').matches) {
-      $('.stages').find('ol').removeClass('stages-container').addClass('stages-container--mobile');
-      $('.stages-container--mobile').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 1000,
-        dots: false,
-      });
-      }
-    }
-
-    $('.sertification__container').slick({
+  $('.sertification__container').slick({
   dots: false,
   infinite: true,
   speed: 700,
@@ -124,55 +125,51 @@ $( document ).ready(function() {
         slidesToScroll: 1
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-    // надо запомнить и попробовать эту фичу
   ]
   });
 });
 
-  // Слайдер наши материалы
-
-  // Первый вариант с вшитыми возможностями 'slick'
-
-  // $('.our-resourses__container').slick({
-  // dots: false,
-  // infinite: true,
-  // speed: 300,
-  // slidesToShow: 1,
-  // slidesToScroll: 1,
-  // responsive: [
-  //   {
-  //     breakpoint: 1920,
-  //     settings: 'unslick'
-  //   },
-  //   {
-  //     breakpoint: 767,
-  //     settings: {
-  //       dots: false,
-  //       infinite: true,
-  //       speed: 300,
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1
-  //     }
-  //   }
-  // ]
-  // });
 
 
-  // Попробовал эту фичу с unslick - все хорошо, но беда в том,
-  // что она срабатывает только один раз после загрузки сайта.
-  // Доходя до условия "unslick" слайдер выключается совсем.
-  // В итоге предлагаемая конструкция имеет место быть, но
-  // как по мне, очень уж она специфичная и одноразовая. Найденное и
-  // адаптированное под slick мной решение с checkMedia() считаю лучше.
+// Слайдер наши материалы
+// Первый вариант с вшитыми возможностями 'slick'
 
-  // Слайдер наши материалы
+// $('.our-resourses__container').slick({
+// dots: false,
+// infinite: true,
+// speed: 300,
+// slidesToShow: 1,
+// slidesToScroll: 1,
+// responsive: [
+//   {
+//     breakpoint: 1920,
+//     settings: 'unslick'
+//   },
+//   {
+//     breakpoint: 767,
+//     settings: {
+//       dots: false,
+//       infinite: true,
+//       speed: 300,
+//       slidesToShow: 1,
+//       slidesToScroll: 1
+//     }
+//   }
+// ]
+// });
 
-  // Мое решение
+// Попробовал эту фичу с unslick - все хорошо, но беда в том,
+// что она срабатывает только один раз после загрузки сайта.
+// Доходя до условия "unslick" слайдер выключается совсем.
+// В итоге предлагаемая конструкция имеет место быть, но
+// как по мне, очень уж она специфичная и одноразовая. Найденное и
+// адаптированное под slick мной решение с checkMedia() считаю лучше.
 
-  // Решил задачу проще, чем в прошлый раз, изменив очередность проверки checkMedia()
+// Слайдер наши материалы
+
+// Мое решение
+// Решил задачу проще, чем в прошлый раз,
+// изменив очередность проверки checkMedia()
 
 $(document).ready(function(){
 
@@ -201,19 +198,9 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-// это для вставки фотки
+// Вставка фотографии к форме со стилизацией
 // срипт не мой, должен был имя файла вставлять вместо
-// кнопки добавить. Интуитивно изменил под себя, не понял как,
+// кнопки "добавить". Интуитивно изменил под себя, не понял как,
 // но под мою задумку заработало. Потом, как лучше прокачаюсь в
 // JS - разберусь в этом блоке и почищу код под себя.
 
@@ -240,9 +227,8 @@ Array.prototype.forEach.call( inputs, function( input )
   });
 });
 
-
-
 // скролл к контактам
+// Не мой, но работает отлично!
 
 $(document).ready(function(){
     $("#menu").on("click","a", function (event) {
@@ -267,7 +253,9 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
+
 // скролл наверх
+// Не мой, но работает отлично!
 
 $(document).ready(function(){
 
@@ -296,7 +284,6 @@ $(document).ready(function(){
   }
 
 });
-
 
 
 

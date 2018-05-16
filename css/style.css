@@ -41,9 +41,10 @@ img {
 }
 
 .visually-hidden {
-  /*display: none; спорная тема, будет ли файл прикрепляться?
-  надо гуглить, но с ее помощью решается вопрос
-  с кнопками на ишаке 11
+  display: none; /*спорная тема, будет
+  ли файл прикрепляться?  надо гуглить,
+  но с ее помощью решается вопрос
+  с кнопками на IE 10+
   в форме с визуализацией*/
   position: absolute;
   width: 1px;
@@ -186,7 +187,7 @@ img {
   .burger-menu li {
     display: block;
     width: 200px;
-    padding:15px 0 15px 20px;
+    /*padding:15px 0 15px 20px;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -202,11 +203,21 @@ img {
   .burger-menu li:hover {
     background:#fff;
     border-left: 5px solid #501b88;
+    padding-left: 5px;
   }
 
   .burger-menu li:last-child {
     border-bottom: #e9e9f1 1px solid;
   }
+  .burger-menu a{
+    display: block;
+    width: 200px;
+    padding:15px 0 15px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
 
   .button-callback {
     display: inline-block;
@@ -233,8 +244,7 @@ img {
 
   .button-callback:focus, .button-callback:hover {
     outline: 0;
-    -webkit-box-shadow: inset 0px 0px 10px 0px #501b88;
-            box-shadow: inset 0px 0px 10px 0px #501b88;
+    background-color: #501b88;
   }
 
   .header-number, .callback-text {
@@ -263,6 +273,10 @@ img {
     margin: 0 auto;
   }
   .header-burger {
+    margin-left: 25px;
+  }
+  .header-cross {
+    margin-top: 10px;
     margin-left: 25px;
   }
   .logo-link {
@@ -1218,12 +1232,13 @@ justify-content: space-between;
 
     cursor: pointer;
     overflow: hidden;
+
+    transition: all 0.3s ease;
   }
 
   .visualization__form-buttom:focus, .visualization__form-buttom:hover {
     outline: 0;
-    -webkit-box-shadow: inset 0px 0px 10px 0px #501b88;
-            box-shadow: inset 0px 0px 10px 0px #501b88;
+    background-color: #501b88;
   }
 
   .visualization-check {
@@ -2687,8 +2702,7 @@ justify-content: space-between;
   }
 
   .question-form__button:hover {
-    -webkit-box-shadow: inset 0 0 10px #501b88;
-    box-shadow: inset 0 0 10px #501b88;
+    background-color:  #501b88;
   }
 
   .question-form__button:focus {
@@ -2711,6 +2725,7 @@ justify-content: space-between;
   .visualization-check.questions-check label a {
     vertical-align: center;
   }
+
 }
 
 /*              Закончил блок Остались вопросы             */
@@ -2863,14 +2878,12 @@ justify-content: space-between;
     transition: all 0.3s ease;
   }
   .our-contacts__call-button:hover {
-    -webkit-box-shadow: inset 0 0 10px #501b88;
-    box-shadow: inset 0 0 10px #501b88;
+    background-color:  #501b88;
   }
 
   .our-contacts__call-button:focus {
     outline: 0;
-    -webkit-box-shadow: inset 0px 0px 10px 1px #501b88;
-            box-shadow: inset 0px 0px 10px 1px #501b88;
+    background-color:  #501b88;
   }
 
   .our-contacts__map-button {
@@ -2893,7 +2906,7 @@ justify-content: space-between;
     font-weight: 400;
     font-size: 16px;
     color: #2e323d;
-    line-height: 40px;
+    /*line-height: 40px;*/
     cursor: pointer;
     overflow: hidden;
     outline: none;
@@ -2901,8 +2914,9 @@ justify-content: space-between;
     transition: all 0.3s ease;
   }
   .our-contacts__map-button:hover {
-    -webkit-box-shadow: inset 0 0 10px #b3b3b3;
-    box-shadow: inset 0 0 10px #b3b3b3;
+    color: #fff;
+    background-color: #501b88;
+    border: 0px solid #000;
   }
 
   .our-contacts__map-button:focus {
@@ -3046,7 +3060,6 @@ justify-content: space-between;
 @media (min-width: 1280px) {
   .our-contacts__title {
     padding-top: 90px;
-
     font-size: 48px;
   }
 
@@ -3058,19 +3071,16 @@ justify-content: space-between;
 
   .our-contacts__number {
     width: 230px;
-
     font-size: 21px;
   }
 
   .our-contacts__mail {
     width: 230px;
-
     font-size: 18px;
   }
 
   .our-contacts__address {
     width: 230px;
-
     font-size: 18px;
   }
 
@@ -3083,18 +3093,72 @@ justify-content: space-between;
 
   .our-contacts__call-button {
     width: 250px;
-
     font-size: 18px;
     }
 
 
   .our-contacts__map-button {
     width: 250px;
-
     font-size: 18px;
   }
 }
 
+/*          Стилизация кнопки to-top           */
+
+@media (min-width: 320px) {
+  #scroll-top-btn {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url(../img/prev.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #fa8c15;
+
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: rotate(90deg);
+
+    cursor: pointer;
+
+  }
+  #scroll-top-btn:hover {
+    background-color:  #501b88;
+  }
+}
+
+@media (min-width: 768px) {
+   #scroll-top-btn {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    text-align: left;
+
+    background-image: url(../img/prev.png);
+            -webkit-background-size: auto;
+            background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #fa8c15;
+
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    transform: rotate(90deg);
+  }
+}
 
 
 
