@@ -5,7 +5,11 @@ $( document ).ready(function() {
 
   $("#phone-mask").mask("+7 (999) -999 -9999");
   $("#phone-mask-questions").mask("+7 (999) -999 -9999");
-
+  $("#phone-mask-popup").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup2").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup3").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup4").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup5").mask("+7 (999) -999 -9999");
 
   // подключаю мобильное меню
 

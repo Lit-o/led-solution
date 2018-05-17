@@ -49,15 +49,68 @@
 
       <div class="header-right">
         <div class="header-contacts">
-          <button type="button" class="button-callback">Оставить заявку</button>
+
+          <!-- Модальное окно №1 Оставить заявку-->
+          <!-- Ссылки на вызов модальных окон-->
+
+            <a href="#win1" class="button-callback">Оставить заявку</a>
+
+            <a href="#x" class="overlay" id="win1"></a>
+            <div class="popup">
+              <h2 class="popup__title">Оформить заявку</h2>
+              <p class="popup__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
+
+              <form action="" class="popup__form" method="POST">
+                <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+
+                <input type="text" class="popup-form__input" name="e-mail" id="" placeholder="E-mail">
+
+                <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup" placeholder="+7 (___) -___ -____">
+
+                <button class="popup-form__button" type="submit">
+                    Отправить
+                </button>
+
+                <div class="visualization-check popup-check">
+                  <input type="checkbox" name="agree" id="popup-check" required>
+                  <label for="popup-check">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+                </div>
+              </form>
+            <a class="close" title="Закрыть" href="#close"></a>
+            </div>
+
 
           <div class="callback-options">
           <a href="tel://+79219152629" class="header-number">
             <span>8 (812) 915-26-29</span>
           </a>
-          <a href="#" class="callback-text">
-            <span>Заказать звонок</span>
-          </a>
+
+          <!-- Модальное окно №2 Обратный звонок-->
+          <a href="#win2" class="callback-text">Заказать звонок</a>
+
+          <a href="#x" class="overlay" id="win2"></a>
+            <div class="popup">
+              <h2 class="popup__title">Обратный звонок</h2>
+              <p class="popup__description">Наш менеджер свяжется с Вами в ближайшее время и ответит на все интирисующие Вас вопросы</p>
+
+              <form action="" class="popup__form" method="POST">
+                <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+
+                <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup2" placeholder="+7 (___) -___ -____">
+
+                <button class="popup-form__button" type="submit">
+                    Отправить
+                </button>
+
+                <div class="visualization-check popup-check">
+                  <input type="checkbox" name="agree" id="popup-check2" required>
+                  <label for="popup-check2">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+                </div>
+              </form>
+            <a class="close" title="Закрыть" href="#close"></a>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -70,8 +123,37 @@
       <p class="main-title-discription">Насщенные и функциональные
 решения по Санкт-Петербургу и
 Лен. области</p>
-      <a href="" class="button-callback button-callback__wellcome">Оставить заявку</a>
+
+      <!-- Модальное окно №2 Обратный звонок-->
+      <a href="#win3" class="button-callback button-callback__wellcome">Оставить заявку</a>
+
+      <a href="#x" class="overlay" id="win3"></a>
+      <div class="popup">
+        <h2 class="popup__title">Оформить заявку</h2>
+        <p class="popup__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
+
+        <form action="" class="popup__form" method="POST">
+          <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+
+          <input type="text" class="popup-form__input" name="e-mail" id="" placeholder="E-mail">
+
+          <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup3" placeholder="+7 (___) -___ -____">
+
+          <button class="popup-form__button" type="submit">
+              Отправить
+          </button>
+
+          <div class="visualization-check popup-check">
+            <input type="checkbox" name="agree" id="popup-check3" required>
+            <label for="popup-check3">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+          </div>
+        </form>
+      <a class="close" title="Закрыть" href="#close"></a>
+      </div>
+
     </section>
+
+
 
     <section class="about-company" id="about-company">
       <div class="about-company__gradient-container">
@@ -274,7 +356,35 @@
       <p class="specialist-call__description">Закажите бесплатный вызов специалиста для проведения замера и
       демонстрации рабочих образцов в удобное для вас время
       </p>
-      <button class="visualization__form-buttom" type="button">Провести замер</button>
+
+       <!-- Модальное окно №4 Провести замер-->
+      <a href="#win4" class="visualization__form-buttom">Провести замер</a>
+
+      <a href="#x" class="overlay" id="win4"></a>
+      <div class="popup">
+        <h2 class="popup__title">Вызов специалиста</h2>
+        <p class="popup__description">Заполните контактную форму, для проведения первоначального замера и демонстрации рабочих образцов</p>
+
+        <form action="" class="popup__form" method="POST">
+          <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+
+          <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup4" placeholder="+7 (___) -___ -____">
+
+          <input type="text" class="popup-form__input" name="user-address" id="" placeholder="Адрес">
+
+          <input type="text" class="popup-form__input" name="user-time" id="" placeholder="Удобное время">
+
+          <button class="popup-form__button" type="submit">
+              Отправить
+          </button>
+
+          <div class="visualization-check popup-check">
+            <input type="checkbox" name="agree" id="popup-check4" required>
+            <label for="popup-check4">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+          </div>
+        </form>
+      <a class="close" title="Закрыть" href="#close"></a>
+      </div>
     </section>
 
     <section class="our-resourses">
@@ -377,8 +487,40 @@
 ул. Дибуновская, д.45</p>
       </div>
       <div class="our-contacts__button-container">
-        <button class="our-contacts__call-button">Заказать звонок</button>
-        <button class="our-contacts__map-button">Посмотреть на карте</button>
+
+         <a href="#win5" class="our-contacts__call-button">Заказать звонок</a>
+
+          <a href="#x" class="overlay" id="win5"></a>
+            <div class="popup">
+              <h2 class="popup__title">Обратный звонок</h2>
+              <p class="popup__description">Наш менеджер свяжется с Вами в ближайшее время и ответит на все интирисующие Вас вопросы</p>
+
+              <form action="" class="popup__form" method="POST">
+                <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+
+                <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup5" placeholder="+7 (___) -___ -____">
+
+                <button class="popup-form__button" type="submit">
+                    Отправить
+                </button>
+
+                <div class="visualization-check popup-check">
+                  <input type="checkbox" name="agree" id="popup-check5" required>
+                  <label for="popup-check5">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+                </div>
+              </form>
+            <a class="close" title="Закрыть" href="#close"></a>
+            </div>
+
+        <a href="#win6" class="our-contacts__map-button">Посмотреть на карте</a>
+
+          <a href="#x" class="overlay" id="win6"></a>
+            <div class="popup-map">
+
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03da81142073ad13b5e907ec6b2f228d7f5a92e61f77da7d9efef3a7ad1cef15&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
+
+            <a class="close" title="Закрыть" href="#close"></a>
+            </div>
       </div>
     </section>
 
