@@ -3432,10 +3432,10 @@ justify-content: space-between;
 .close {
     top: -0px;
     right: -0px;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    padding: 0;
+    padding: 0px;
   /*  -webkit-border-radius: 0px 4px 0px 0px;
        -moz-border-radius: 0px 4px 0px 0px;
         -ms-border-radius: 0px 4px 0px 0px;
@@ -3443,9 +3443,10 @@ justify-content: space-between;
 
     background-color: #fa8c15;
 
+    color: #fff;
     text-align: center;
     text-decoration: none;
-    font: 13px/20px roboto, Arial, sans-serif;
+    font: 50px roboto, Arial, sans-serif;
     font-weight: bold;
     -webkit-transition: all ease 0.5s;
        -moz-transition: all ease 0.5s;
@@ -3453,12 +3454,7 @@ justify-content: space-between;
          -o-transition: all ease 0.5s;
             transition: all ease 0.5s;
 }
-.close:before {
-    color: rgba(255, 255, 255, 0.9);
-    content: "X";
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
-    font-size: 12px;
-}
+
 .close:hover {
     background-color: #501b88;
     /*-webkit-transform: rotate(180deg);
