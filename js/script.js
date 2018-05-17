@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 
 
-
   // подключаю мобильное меню
 
   $( ".header-cross" ).hide();
@@ -254,7 +253,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  $('#scroll-top-btn').on('click', function (event) {
+   $('#scroll-top-btn').on('click', function (event) {
     event.preventDefault();
     $('body,html').animate({'scrollTop':0},1000);
   });
@@ -278,7 +277,7 @@ $(document).ready(function(){
     }
   }
 
-  // включаю маску для телефона
+    // включаю маску для телефона
 
   $("#phone-mask").mask("+7 (999) -999 -9999");
   $("#phone-mask-questions").mask("+7 (999) -999 -9999");
@@ -289,9 +288,43 @@ $(document).ready(function(){
   $("#phone-mask-popup5").mask("+7 (999) -999 -9999");
 
 
+});
 
+  // Скролл наверх на странице с согласием на обработку данных
+$(document).ready(function(){
+    $('#scroll-top-btn-agree').on('click', function (event) {
+    event.preventDefault();
+    $('body,html').animate({'scrollTop':0},1000);
+  });
+
+  var timer;
+  $(window).on('scroll', function(){
+    if ( timer ) clearTimeout(timer);
+    timer = setTimeout(function(){
+      showScrollTopBtn();
+    }, 100);
+  });
+
+  showScrollTopBtn();
+
+  function showScrollTopBtn() {
+    if( $(document).scrollTop() > 500 ) {
+      $('#scroll-top-btn-agree').fadeIn();
+    }
+    else {
+      $('#scroll-top-btn-agree').fadeOut();
+    }
+  }
+
+    // Закрываю окно с соглашением
+  $("#come-back").on('click', function(e) {
+    window.close();
+  });
 
 });
+
+
+
 
 
 
