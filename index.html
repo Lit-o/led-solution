@@ -9,17 +9,19 @@
   <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon5.ico">
+  <link rel="icon" href="img/favicon5.ico" type="image/vnd.microsoft.icon">
 
   <title>Светодиодная подсветка под ключ в Санкт-Петербурге</title>
 </head>
+
 <body>
+
+
   <header class="main-header">
     <div class="header-container">
       <div class="header-left">
         <div class="header-burger"> </div>
         <div class="header-cross">&#735;</div>
-
         <nav class="burger-menu" id="menu__mob">
           <ul class="burger-menu-list">
             <li><a href="#about-company">О нас</a></li>
@@ -51,34 +53,32 @@
         <div class="header-contacts">
 
           <!-- Модальное окно №1 Оставить заявку-->
-          <!-- Ссылки на вызов модальных окон-->
+          <a href="#win1" class="button-callback">Оставить заявку</a>
+          <a href="#x" class="overlay" id="win1"></a>
 
-            <a href="#win1" class="button-callback">Оставить заявку</a>
+          <div class="popup">
+            <h2 class="popup__title">Оформить заявку</h2>
+            <p class="popup__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
 
-            <a href="#x" class="overlay" id="win1"></a>
-            <div class="popup">
-              <h2 class="popup__title">Оформить заявку</h2>
-              <p class="popup__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
+            <form action="" class="popup__form" method="POST">
+              <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
 
-              <form action="" class="popup__form" method="POST">
-                <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+              <input type="text" class="popup-form__input" name="e-mail" id="" placeholder="E-mail">
 
-                <input type="text" class="popup-form__input" name="e-mail" id="" placeholder="E-mail">
+              <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup" placeholder="+7 (___) -___ -____">
 
-                <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup" placeholder="+7 (___) -___ -____">
+              <button class="popup-form__button" type="submit">
+                  Отправить
+              </button>
 
-                <button class="popup-form__button" type="submit">
-                    Отправить
-                </button>
-
-                <div class="visualization-check popup-check">
-                  <input type="checkbox" name="agree" id="popup-check" required checked>
-                  <label for="popup-check">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
-                </div>
-              </form>
+              <div class="visualization-check popup-check">
+                <input type="checkbox" name="agree" id="popup-check" required checked>
+                <label for="popup-check">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+              </div>
+            </form>
             <a class="close" title="Закрыть" href="#close">&#735;</a>
-            </div>
-
+          </div>
+          <!-- Модальное окно №1 Закончилось-->
 
           <div class="callback-options">
           <a href="tel://+79219152629" class="header-number">
@@ -87,8 +87,8 @@
 
           <!-- Модальное окно №2 Обратный звонок-->
           <a href="#win2" class="callback-text">Заказать звонок</a>
-
           <a href="#x" class="overlay" id="win2"></a>
+
             <div class="popup">
               <h2 class="popup__title">Обратный звонок</h2>
               <p class="popup__description">Наш менеджер свяжется с Вами в ближайшее время и ответит на все интирисующие Вас вопросы</p>
@@ -107,9 +107,9 @@
                   <label for="popup-check2">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
                 </div>
               </form>
-            <a class="close" title="Закрыть" href="#close">&#735;</a>
+              <a class="close" title="Закрыть" href="#close">&#735;</a>
             </div>
-
+            <!-- Модальное окно №2 Закончилось-->
 
           </div>
         </div>
@@ -117,17 +117,19 @@
     </div>
   </header>
 
+
   <main>
+    <!-- Секция приветсвия -->
     <section class="wellcome">
       <h1 class="main-title">Подсветка светодиодной лентой</h1>
       <p class="main-title-discription">Насщенные и функциональные
-решения по Санкт-Петербургу и
-Лен. области</p>
+        решения по Санкт-Петербургу и
+        Лен. области</p>
 
-      <!-- Модальное окно №2 Обратный звонок-->
+      <!-- Модальное окно №3 Обратный звонок-->
       <a href="#win3" class="button-callback button-callback__wellcome">Оставить заявку</a>
-
       <a href="#x" class="overlay" id="win3"></a>
+
       <div class="popup">
         <h2 class="popup__title">Оформить заявку</h2>
         <p class="popup__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
@@ -148,13 +150,12 @@
             <label for="popup-check3">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
           </div>
         </form>
-      <a class="close" title="Закрыть" href="#close">&#735;</a>
+        <a class="close" title="Закрыть" href="#close">&#735;</a>
       </div>
-
     </section>
 
 
-
+    <!-- Секция о компании -->
     <section class="about-company" id="about-company">
       <div class="about-company__gradient-container">
         <div class="about-company__container">
@@ -192,6 +193,8 @@
       </div>
     </section>
 
+
+    <!-- Секция об этапах работы -->
     <section class="stages" id="stages">
       <h2 class="stages-title">Этапы работы</h2>
       <ol class="stages-container">
@@ -227,6 +230,10 @@
       </ol>
     </section>
 
+
+    <!-- Секция с заявкой на визуализацию.
+      Бекэндеру протестить момент с загрузкой фото при display none на классе inputfile.
+      На элемент не срабатывает корректно visually-hidden в IE -->
     <section class="visualization" id="visualization">
       <div class="visualization-container">
         <div class="visualization-description-side">
@@ -243,16 +250,14 @@
         </div>
 
         <form class="visualization-form" action="" method="post">
-        <!-- <div class="demonstration-item"> -->
-          <!-- <label for="username">Введите Ваше имя</label> -->
           <input type="text" class="visualization-form-input" name="username" id="username" placeholder="Ваше Имя">
-        <!-- </div> -->
 
           <input type="text" class="visualization-form-input" name="tel-number" id="phone-mask" placeholder="+7 (___) -___ -____">
 
           <input type="text" class="visualization-form-input" name="e-mail" id="e-mail" placeholder="E-mail">
 
           <div class="form-flex-container">
+            <!-- Спорный вопрос с inputfile -->
             <input type="file" class="visually-hidden inputfile" name="foto" id="foto" data-multiple-caption="{count} files selected" multiple>
             <label for="foto" class="visualization__form-buttom"><span>Ваше фото</span></label>
 
@@ -270,14 +275,12 @@
     </section>
 
 
-
+    <!-- Секция с примерами наших работ -->
     <section class="our-works" id="our-works">
       <h2 class="our-works__title">Некоторые наши работы</h2>
 
-      <!-- Заменить на ul li пункты с работами -->
-
-      <div class="our-works__container">
-        <div class="our-works__item">
+      <ol class="our-works__container">
+        <li class="our-works__item">
           <img src="img/our-1.jpg" alt="">
           <h3 class="our-works__container-title">Кухонный гарнитур <br> Маршака 12к2</h3>
           <p class="our-works__container-description">Небольшое описание кухни номер 1
@@ -293,9 +296,9 @@
               <span>14 500 &#8381;</span>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="our-works__item">
+        <li class="our-works__item">
           <img src="img/our-2.jpg" alt="">
           <h3 class="our-works__container-title">Кухонный гарнитур <br> Маршака 12к2</h3>
           <p class="our-works__container-description">Небольшое описание кухни номер 1
@@ -311,9 +314,9 @@
               <span>14 500 &#8381;</span>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="our-works__item">
+        <li class="our-works__item">
           <img src="img/our-3.jpg" alt="">
           <h3 class="our-works__container-title">Кухонный гарнитур <br> Маршака 12к2</h3>
           <p class="our-works__container-description">Небольшое описание кухни номер 1
@@ -329,9 +332,9 @@
               <span>14 500 &#8381;</span>
             </div>
           </div>
-        </div>
+        </li>
 
-        <div class="our-works__item">
+        <li class="our-works__item">
           <img src="img/our-4.jpg" alt="">
           <h3 class="our-works__container-title">Кухонный гарнитур <br> Маршака 12к2</h3>
           <p class="our-works__container-description">Небольшое описание кухни номер 1
@@ -347,10 +350,12 @@
               <span>14 500 &#8381;</span>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ol>
     </section>
 
+
+    <!-- Мини-секция вызов для замера -->
     <section class="specialist-call">
       <h2 class="visually-hidden">Заказать вызов специалиста для бесплатного расчета светодиодной ленты в удобное любое время</h2>
       <p class="specialist-call__description">Закажите бесплатный вызов специалиста для проведения замера и
@@ -359,7 +364,6 @@
 
        <!-- Модальное окно №4 Провести замер-->
       <a href="#win4" class="visualization__form-buttom">Провести замер</a>
-
       <a href="#x" class="overlay" id="win4"></a>
       <div class="popup">
         <h2 class="popup__title">Вызов специалиста</h2>
@@ -383,10 +387,12 @@
             <label for="popup-check4">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
           </div>
         </form>
-      <a class="close" title="Закрыть" href="#close">&#735;</a>
+        <a class="close" title="Закрыть" href="#close">&#735;</a>
       </div>
     </section>
 
+
+    <!-- Секция наши материалы -->
     <section class="our-resourses">
       <h2 class="our-resourses__title">При создании светодиодной подсветки для вас,
       в дело идут только качественные материалы
@@ -423,7 +429,10 @@
       </div>
     </section>
 
+
+    <!-- Секция наши особенности -->
     <section class="our-features">
+      <h2 class="visually-hidden">Особенности компании Led-Solution</h2>
       <p class="feature-item guarantee">Гарантия на все наше
 оборудование — 1 год</p>
       <p class="feature-item certification">Мы используем
@@ -455,6 +464,8 @@
       </div>
     </section>
 
+
+    <!-- Секция с формой остались вопросы? -->
     <section class="questions">
       <h2 class="questions__title">Остались вопросы?</h2>
       <p class="questions__description">Заполните форму и наш менеджер свяжется с вами в ближайшее время</p>
@@ -469,7 +480,6 @@
           <button class="question-form__button" type="submit">
               Отправить
           </button>
-
 
           <div class="visualization-check questions-check">
             <input type="checkbox" name="agree" id="question-check" required checked>
@@ -488,33 +498,30 @@
       </div>
       <div class="our-contacts__button-container">
 
-         <a href="#win5" class="our-contacts__call-button">Заказать звонок</a>
+        <a href="#win5" class="our-contacts__call-button">Заказать звонок</a>
+        <a href="#x" class="overlay" id="win5"></a>
+          <div class="popup">
+            <h2 class="popup__title">Обратный звонок</h2>
+            <p class="popup__description">Наш менеджер свяжется с Вами в ближайшее время и ответит на все интирисующие Вас вопросы</p>
 
-          <a href="#x" class="overlay" id="win5"></a>
-            <div class="popup">
-              <h2 class="popup__title">Обратный звонок</h2>
-              <p class="popup__description">Наш менеджер свяжется с Вами в ближайшее время и ответит на все интирисующие Вас вопросы</p>
+            <form action="" class="popup__form" method="POST">
+              <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
 
-              <form action="" class="popup__form" method="POST">
-                <input type="text" class="popup-form__input" name="username" id="" placeholder="Ваше Имя">
+              <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup5" placeholder="+7 (___) -___ -____">
 
-                <input type="text" class="popup-form__input" name="tel-number" id="phone-mask-popup5" placeholder="+7 (___) -___ -____">
+              <button class="popup-form__button" type="submit">
+                  Отправить
+              </button>
 
-                <button class="popup-form__button" type="submit">
-                    Отправить
-                </button>
-
-                <div class="visualization-check popup-check">
-                  <input type="checkbox" name="agree" id="popup-check5" required checked>
-                  <label for="popup-check5">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
-                </div>
-              </form>
-            <a class="close" title="Закрыть" href="#close">&#735;</a>
-            </div>
-
+              <div class="visualization-check popup-check">
+                <input type="checkbox" name="agree" id="popup-check5" required checked>
+                <label for="popup-check5">Я согласен на  <a href="agree.html" target="_blank">обработку персональных данных</a></label>
+              </div>
+            </form>
+          <a class="close" title="Закрыть" href="#close">&#735;</a>
+          </div>
         <a href="#win6" class="our-contacts__map-button">Посмотреть на карте</a>
-
-          <a href="#x" class="overlay" id="win6"></a>
+        <a href="#x" class="overlay" id="win6"></a>
             <div class="popup-map">
 
               <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A03da81142073ad13b5e907ec6b2f228d7f5a92e61f77da7d9efef3a7ad1cef15&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -524,16 +531,16 @@
       </div>
     </section>
 
+    <!-- Кнопочка скрола наверх -->
     <div id="scroll-top-btn"></div>
-
   </main>
 
   <footer>
-
+    <!-- Когда будут сделаны социалки для компании - засуну их сюда, и когда будет сделан мой собственный сайт, сюда же засуну копирайтинг с ссылкой на него  -->
   </footer>
 
   <script src="js/jQuery3.3.1.js"></script>
-  <script src="js/script.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

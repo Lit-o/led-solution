@@ -41,11 +41,6 @@ img {
 }
 
 .visually-hidden {
-  display: none; /*спорная тема, будет
-  ли файл прикрепляться?  надо гуглить,
-  но с ее помощью решается вопрос
-  с кнопками на IE 10+
-  в форме с визуализацией*/
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1167,6 +1162,9 @@ justify-content: space-between;
 
     border: 5px solid rgba(255,255,255, 0.75);
   }
+  .inputfile {
+    display: none;
+  }
 
   .visualization-form-input {
     width: 280px;
@@ -2184,7 +2182,7 @@ justify-content: space-between;
   }
 
   .feature-item.guarantee {
-    width: 300px;
+    width: 305px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -2192,7 +2190,7 @@ justify-content: space-between;
     padding-right: 0;
   }
   .feature-item.certification {
-    width: 472px;
+    width: 467px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -3002,7 +3000,7 @@ justify-content: space-between;
     margin: 0;
 
     padding: 0 25px;
-    border: 0px;
+    /*border: 0px;*/
     border-radius: 20px;
 
     vertical-align: middle;
@@ -3022,6 +3020,7 @@ justify-content: space-between;
     width: 230px;
     height: 40px;
     margin: 0;
+    margin-left: auto; /*Решает проблему в IE, не мешает */
     padding: 0 25px;
 
     vertical-align: middle;
