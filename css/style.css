@@ -1972,6 +1972,9 @@ justify-content: space-between;
     height: 210px;
     margin: 0 0;
     margin-bottom: 25px;
+    padding-left: 0;
+
+    text-align: left;
 
     -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
@@ -1989,6 +1992,7 @@ justify-content: space-between;
     margin-left: 210px;
     padding-top: 35px;
     padding-bottom: 0;
+    padding-left: 0;
 
     font-family: roboto, Arial, sans-serif;
     font-weight: 500;
@@ -2001,6 +2005,7 @@ justify-content: space-between;
     margin-left: 210px;
     width: 435px;
     margin-top: 20px;
+    padding-left: 0;
 
     font-family: roboto, Arial, sans-serif;
     font-weight: 400;
@@ -3067,7 +3072,7 @@ justify-content: space-between;
     width: 690px;
     margin: 0 auto;
     margin-top: 25px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     display: -webkit-flex;
        display: -moz-flex;
         display: -ms-flex;

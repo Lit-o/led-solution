@@ -121,7 +121,102 @@ $( document ).ready(function() {
     }
   ]
   });
-});
+
+
+      // включаю маску для телефона
+
+  $("#phone-mask").mask("+7 (999) -999 -9999");
+  $("#phone-mask-questions").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup2").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup3").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup4").mask("+7 (999) -999 -9999");
+  $("#phone-mask-popup5").mask("+7 (999) -999 -9999");
+
+
+  // Вставка фотографии к форме со стилизацией
+  // срипт не мой, должен был имя файла вставлять вместо
+  // кнопки "добавить". Интуитивно изменил под себя, не понял как,
+  // но под мою задумку заработало. Потом, как лучше прокачаюсь в
+  // JS - разберусь в этом блоке и почищу код под себя.
+
+  var inputs = document.querySelectorAll( '.inputfile' );
+  Array.prototype.forEach.call( inputs, function( input )
+  {
+  var label  = input.nextElementSibling,
+    labelVal = label.innerHTML;
+
+  input.addEventListener( 'change', function( e )
+  {
+    var fileName = '';
+    if( this.files && this.files.length > 1 )
+      fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+    else
+      fileName = 'Добавлено';
+    // вот тут вкрутил свою задумку вместо кода ниже.
+    // e.target.value.split( '\\' ).pop();
+
+    if( fileName )
+      label.querySelector( 'span' ).innerHTML = fileName;
+    else
+      label.innerHTML = labelVal;
+    });
+  });
+
+
+  // скролл к контактам
+  // Не мой, но работает отлично!
+  $("#menu").on("click","a", function (event) {
+    event.preventDefault();
+
+    var id  = $(this).attr('href'),
+
+        top = $(id).offset().top;
+
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+
+
+  $("#menu__mob").on("click","a", function (event) {
+    event.preventDefault();
+
+    var id  = $(this).attr('href'),
+
+        top = $(id).offset().top;
+
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+
+
+  // скролл наверх
+  // Не мой, но работает отлично!
+  $('#scroll-top-btn').on('click', function (event) {
+    event.preventDefault();
+    $('body,html').animate({'scrollTop':0},1000);
+  });
+
+  var timer;
+  $(window).on('scroll', function(){
+    if ( timer ) clearTimeout(timer);
+    timer = setTimeout(function(){
+      showScrollTopBtn();
+    }, 100);
+  });
+
+  showScrollTopBtn();
+
+  function showScrollTopBtn() {
+    if( $(document).scrollTop() > 500 ) {
+      $('#scroll-top-btn').fadeIn();
+    }
+    else {
+      $('#scroll-top-btn').fadeOut();
+    }
+  }
+
+
+
+}); //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -187,112 +282,14 @@ $(document).ready(function(){
         slidesToScroll: 1
       });
       }
-    }
-});
+  };
+}); ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-// Вставка фотографии к форме со стилизацией
-// срипт не мой, должен был имя файла вставлять вместо
-// кнопки "добавить". Интуитивно изменил под себя, не понял как,
-// но под мою задумку заработало. Потом, как лучше прокачаюсь в
-// JS - разберусь в этом блоке и почищу код под себя.
-
-var inputs = document.querySelectorAll( '.inputfile' );
-Array.prototype.forEach.call( inputs, function( input )
-{
-  var label  = input.nextElementSibling,
-    labelVal = label.innerHTML;
-
-  input.addEventListener( 'change', function( e )
-  {
-    var fileName = '';
-    if( this.files && this.files.length > 1 )
-      fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-    else
-      fileName = 'Добавлено';
-    // вот тут вкрутил свою задумку вместо кода ниже.
-    // e.target.value.split( '\\' ).pop();
-
-    if( fileName )
-      label.querySelector( 'span' ).innerHTML = fileName;
-    else
-      label.innerHTML = labelVal;
-  });
-});
-
-// скролл к контактам
-// Не мой, но работает отлично!
 
 $(document).ready(function(){
-    $("#menu").on("click","a", function (event) {
-        event.preventDefault();
+    // Скролл наверх на странице с согласием на обработку данных
 
-        var id  = $(this).attr('href'),
-
-            top = $(id).offset().top;
-
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
-});
-
-$(document).ready(function(){
-    $("#menu__mob").on("click","a", function (event) {
-        event.preventDefault();
-
-        var id  = $(this).attr('href'),
-
-            top = $(id).offset().top;
-
-        $('body,html').animate({scrollTop: top}, 1500);
-    });
-});
-
-// скролл наверх
-// Не мой, но работает отлично!
-
-$(document).ready(function(){
-
-   $('#scroll-top-btn').on('click', function (event) {
-    event.preventDefault();
-    $('body,html').animate({'scrollTop':0},1000);
-  });
-
-  var timer;
-  $(window).on('scroll', function(){
-    if ( timer ) clearTimeout(timer);
-    timer = setTimeout(function(){
-      showScrollTopBtn();
-    }, 100);
-  });
-
-  showScrollTopBtn();
-
-  function showScrollTopBtn() {
-    if( $(document).scrollTop() > 500 ) {
-      $('#scroll-top-btn').fadeIn();
-    }
-    else {
-      $('#scroll-top-btn').fadeOut();
-    }
-  }
-
-    // включаю маску для телефона
-
-  $("#phone-mask").mask("+7 (999) -999 -9999");
-  $("#phone-mask-questions").mask("+7 (999) -999 -9999");
-  $("#phone-mask-popup").mask("+7 (999) -999 -9999");
-  $("#phone-mask-popup2").mask("+7 (999) -999 -9999");
-  $("#phone-mask-popup3").mask("+7 (999) -999 -9999");
-  $("#phone-mask-popup4").mask("+7 (999) -999 -9999");
-  $("#phone-mask-popup5").mask("+7 (999) -999 -9999");
-
-
-});
-
-  // Скролл наверх на странице с согласием на обработку данных
-$(document).ready(function(){
-    $('#scroll-top-btn-agree').on('click', function (event) {
+  $('#scroll-top-btn-agree').on('click', function (event) {
     event.preventDefault();
     $('body,html').animate({'scrollTop':0},1000);
   });
@@ -315,18 +312,13 @@ $(document).ready(function(){
       $('#scroll-top-btn-agree').fadeOut();
     }
   }
-
-    // Закрываю окно с соглашением
-  $("#come-back").on('click', function(e) {
-    window.close();
-  });
-
 });
 
 
-
-
-
+  // Закрываю окно с соглашением
+$("#come-back").on('click', function(e) {
+  window.close();
+});
 
 // Маски для форм мин
 /*
