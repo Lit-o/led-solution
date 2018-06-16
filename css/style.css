@@ -3187,6 +3187,7 @@ justify-content: space-between;
 @media (min-width: 320px) {
   #scroll-top-btn, #scroll-top-btn-agree {
     position: fixed;
+    z-index:5;
     right: 5px;
     bottom: 5px;
 
