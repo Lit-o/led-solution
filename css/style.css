@@ -146,8 +146,8 @@ img {
     margin-top: 10px;
 
 
-    font-size:50px;
-    text-align: center;
+    /*font-size:50px;*/
+    text-align: top;
     font-weight: bold;
 
     cursor:pointer;
@@ -3520,7 +3520,7 @@ justify-content: space-between;
   text-decoration: none;
   font-family: roboto, sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  /*font-size: 50px;*/
   -webkit-transition: all ease 0.5s;
      -moz-transition: all ease 0.5s;
       -ms-transition: all ease 0.5s;
